@@ -1,8 +1,4 @@
-package com.samvbeckmann.machinelearning.reinforcement.tools;
-
 import com.samvbeckmann.machinelearning.reinforcement.simulation.Board;
-
-import java.io.Serializable;
 
 /**
  * Created for Reinforcement Learning by @author Nate Beckemeyer on 2017-04-17.
@@ -26,14 +22,19 @@ class StateAction
 
         StateAction that = (StateAction) o;
 
-        return action == that.action && state.equals(that.state);
+        return action == that.action && state == that.state;
     }
 
     @Override
     public int hashCode()
     {
-        int result = state.hashCode();
-        result = 31 * result + action;
-        return result;
+        return 31 * state.hashCode() + action;
+    }
+
+
+    @Override
+    public String toString()
+    {
+        return state.toString() + " " + action;
     }
 }

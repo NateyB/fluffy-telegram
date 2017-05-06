@@ -105,3 +105,7 @@ Reinforcement_Learning/out
 *.iml
 *.idea
 *.dSYM
+Deep_Learning/MNIST_data
+Deep_Learning/text8.zip
+Deep_Learning/Datasets/
+Deep_Learning/Datasets
